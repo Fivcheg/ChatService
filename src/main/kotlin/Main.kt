@@ -7,8 +7,7 @@ fun main() {
     ChatService.addMessage(3, Message("aaasd", false, false))
     ChatService.addMessage(3, Message("2342aaasd", false, false))
     ChatService.printChats()
-    println(ChatService.getMessages(1, 1))
-    ChatService.deleteChat(2)
+    println(ChatService.getMessages(5, 1))
     ChatService.printChats()
     println(ChatService.getChats())
 }
