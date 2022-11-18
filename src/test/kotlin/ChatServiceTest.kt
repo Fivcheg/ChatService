@@ -17,7 +17,6 @@ class ChatServiceTest{
         val y = ChatService.getChats();
         val result = x.equals(y)
         assertFalse(result)
-
     }
     @Test
     fun getChatsTrue(){
@@ -50,6 +49,4 @@ class ChatServiceTest{
         val result = x.equals(y)
         assertFalse(result)
     }
-
-
 }
