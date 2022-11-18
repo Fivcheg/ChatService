@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12f46c4e-008a-4e89-b152-062da5861d05" name="Changes" comment="Added fun addMesage, printChats, unreadChatsCount, getMessages, deleteMessages, deleteChat, data-classes Chat, Message">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
+    <list default="true" id="12f46c4e-008a-4e89-b152-062da5861d05" name="Changes" comment="Add fun getChats, Autotests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ChatService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ChatService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "E:/netology/Kotlin/NoteService"
+    "last_opened_file_path": "E:/netology/Kotlin/vk-service-wall"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -71,28 +70,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ChatService [jacocoTestReport]">
-    <configuration name="ChatService [:jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":jacocoTestReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle :jacocoTestReport" />
+      <command value="gradle jacocoTestReport" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.ChatServiceTest.getMessagesTrue">
     <configuration name="ChatService [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -114,7 +98,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.addMessageTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,7 +111,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ChatServiceTest&quot;" />
+            <option value="&quot;ChatServiceTest.addMessageTrue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -137,7 +121,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.getMessagesThrow" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.getChatsTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +134,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ChatServiceTest.getMessagesThrow&quot;" />
+            <option value="&quot;ChatServiceTest.getChatsTrue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -183,13 +167,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.netology.MainKt" />
+      <module name="ChatService.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChatService [jacocoTestReport]" />
-        <item itemvalue="Gradle.ChatServiceTest" />
-        <item itemvalue="Gradle.ChatService [:jacocoTestReport]" />
         <item itemvalue="Gradle.ChatServiceTest.getMessagesTrue" />
-        <item itemvalue="Gradle.ChatServiceTest.getMessagesThrow" />
+        <item itemvalue="Gradle.ChatServiceTest.getChatsTrue" />
+        <item itemvalue="Gradle.ChatServiceTest.addMessageTrue" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.ChatService [jacocoTestReport]" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668333067951</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add fun getChats, Autotests">
+      <created>1668359838667</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668359838667</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +232,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added fun addMesage, printChats, unreadChatsCount, getMessages, deleteMessages, deleteChat, data-classes Chat, Message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fun addMesage, printChats, unreadChatsCount, getMessages, deleteMessages, deleteChat, data-classes Chat, Message" />
+    <MESSAGE value="Add fun getChats, Autotests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fun getChats, Autotests" />
   </component>
 </project>

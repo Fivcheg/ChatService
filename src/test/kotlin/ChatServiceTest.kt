@@ -1,3 +1,4 @@
+import junit.framework.TestCase.*
 import org.junit.Before
 import org.junit.Test
 import ru.netology.ChatService
@@ -11,20 +12,24 @@ class ChatServiceTest{
     }
     @Test
     fun addMessageTrue() {
+        val x = ChatService.getChats();
         ChatService.addMessage(1, Message("hihihi", false, true))
-    }
-    @Test
-    fun printChatsTrue() {
-        ChatService.printChats()
+        val y = ChatService.getChats();
+        val result = x.equals(y)
+        assertFalse(result)
+
     }
     @Test
     fun getChatsTrue(){
+        val x = ChatService.getChats()
         ChatService.addMessage(1, Message("hihihi", false, true))
         ChatService.addMessage(1, Message("hihihi", false, true))
         ChatService.addMessage(2, Message("asd", true, false))
         ChatService.addMessage(3, Message("aaasd", false, false))
         ChatService.addMessage(3, Message("2342aaasd", false, false))
-        ChatService.getChats()
+        val y = ChatService.getChats();
+        val result = x.equals(y)
+        assertFalse(result)
     }
     @Test(expected = IndexOutOfBoundsException::class)
     fun getChatsThrow(){
@@ -36,10 +41,14 @@ class ChatServiceTest{
     }
     @Test
     fun getMessagesTrue(){
+        val x = ChatService.getChats()
         ChatService.addMessage(1, Message("hihihi", false, true))
         ChatService.addMessage(1, Message("hihihi", false, true))
         ChatService.addMessage(3, Message("aaasd", false, false))
         ChatService.getMessages(1, 1)
+        val y = ChatService.getChats();
+        val result = x.equals(y)
+        assertFalse(result)
     }
 
 

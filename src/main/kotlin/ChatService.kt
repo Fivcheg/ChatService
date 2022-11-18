@@ -3,7 +3,7 @@ package ru.netology
 object ChatService {
     private var chats = mutableMapOf<Int, Chat>()
     fun clear() {
-        chats = mutableMapOf<Int, Chat>()
+        chats = mutableMapOf()
     }
     fun addMessage(recepient: Int, message: Message) {
         chats.getOrPut(recepient) { Chat() }.messages.add(message)
@@ -30,15 +30,7 @@ object ChatService {
         chats.remove(recepient)
     }
 
-    fun getChats(): MutableMap<Int, Message> {
-        val chatsId: List<Int> = chats.keys.map { values -> values }
-        val chatsMes: List<Message> = chats.values.map { values -> values.messages[0] }
-        var maxList: MutableMap<Int, Message> = mutableMapOf()
-        for (values in chatsId) {
-            maxList[chatsId[values - 1]] = chatsMes[values - 1]
-        }
-        return maxList
-    }
+    fun getChats() = chats.mapValues { it.value.messages[0] }
 }
 
 
