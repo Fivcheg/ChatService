@@ -1,4 +1,5 @@
 import junit.framework.TestCase.*
+import org.junit.Assert.assertThrows
 import org.junit.Before
 import org.junit.Test
 import ru.netology.ChatService
@@ -30,13 +31,15 @@ class ChatServiceTest{
         val result = x.equals(y)
         assertFalse(result)
     }
-    @Test(expected = IndexOutOfBoundsException::class)
+    @Test(expected = AssertionError::class)
     fun getChatsThrow(){
         ChatService.addMessage(1, Message("hihihi", false, true))
         ChatService.addMessage(1, Message("hihihi", false, true))
         ChatService.addMessage(3, Message("aaasd", false, false))
         ChatService.addMessage(3, Message("2342aaasd", false, false))
+        assertThrows(AssertionError::class.java){
         ChatService.getChats()
+        }
     }
     @Test
     fun getMessagesTrue(){
